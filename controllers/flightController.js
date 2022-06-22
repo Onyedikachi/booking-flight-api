@@ -19,4 +19,12 @@ exports.create = (req, res) => {
     return res.status(200).json({"message": "New flight created"});
 }
 
+exports.delete = (req, res) => {
+    const { id } = req.params;
+
+    flights = flights.filter((flight) => flight.id !== id);
+    return res.status(200).json({"message": `Flight with id ${id} deleted`});
+}
+
+
 
