@@ -12,4 +12,11 @@ exports.listOne = (req, res) => {
     return res.status(200).json(flights.filter((id)=> flights.id === id));
 }
 
+exports.create = (req, res) => {
+    const { newFlight } =  req.body;
+
+    flights.push(newFlight);
+    return res.status(200).json({"message": "New flight created"});
+}
+
 
