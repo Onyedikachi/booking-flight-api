@@ -9,7 +9,7 @@ exports.listAll = (req, res) => {
 exports.listOne = (req, res) => {
     const { id } =  req.params;
 
-    return res.status(200).json(flights.filter((id)=> flights.id === id));
+    return res.status(200).json(flights.filter((flight)=> flight.id === id));
 }
 
 exports.create = (req, res) => {
